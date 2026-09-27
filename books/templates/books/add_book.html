@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Add Book</title>
+  </head>
+  <body>
+    <h1>Add New Book</h1>
+
+    <form method="POST">
+      {% csrf_token %}
+
+      <label>Title:</label>
+      <input type="text" name="title" required />
+      <br /><br />
+
+      <label>Author:</label>
+      <input type="text" name="author" required />
+      <br /><br />
+
+      <label>Year Published:</label>
+      <input type="number" name="year_published" required />
+      <br /><br />
+
+      <label>Available:</label>
+      <input type="checkbox" name="is_available" checked />
+      <br /><br />
+
+      <button type="submit">Add Book</button>
+    </form>
+
+    <br />
+    <a href="/">Back to Library</a>
+  </body>
+</html>
